@@ -1,0 +1,24 @@
+.app{
+    height: 100vh;
+
+    .section{
+        width: 100%;
+        height: calc(100vh - 70px);
+        // background-color: lightsalmon;
+        position: relative; 
+        top: 70px;
+        scroll-behavior: smooth; 
+        scroll-snap-type: y mandatory; // y axis par scroll karne par jo bhi div ka size jyada rhega scroll bar uss pure div/container ko show karega smooth tarike se 
+        scrollbar-width: none; // for firefox
+        &::-webkit-scrollbar{  // it will not show us scrollbar
+            display: none;
+        }
+        
+        // for intro, portfolio and all each element inside it.
+        > *{
+            height: calc(100vh - 70px);
+            width: 100vw;
+            scroll-snap-align: start;
+        }
+    }    
+}
